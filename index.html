@@ -39,7 +39,8 @@
             <!-- Sign Up button trigger modal -->
             <button
               type="button"
-              class="btn btn-primary"
+              id="signUpBtn"
+              class="btn btn-primary d-none"
               data-bs-toggle="modal"
               data-bs-target="#signUpModal"
             >
@@ -49,11 +50,23 @@
             <button
               type="button"
               id="signInBtn"
-              class="btn btn-outline-success"
+              class="btn btn-outline-success d-none"
               data-bs-toggle="modal"
               data-bs-target="#signInModal"
             >
               Sign In
+            </button>
+            <button
+              type="button"
+              id="createVisitBtn"
+              class="btn btn-outline-success d-none"
+              data-bs-toggle="modal"
+              data-bs-target="#createVisitBtnModal"
+            >
+              Create visit
+            </button>
+            <button type="button" id="logOutBtn" class="btn btn-danger d-none">
+              Log Out
             </button>
           </form>
           <!-- Sign Up Modal -->
