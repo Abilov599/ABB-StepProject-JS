@@ -1,4 +1,29 @@
+const signUpBtn = document.querySelector("#signUpBtn");
 const signInBtn = document.querySelector("#signInBtn");
+const logOutBtn = document.querySelector("#logOutBtn");
+const createVisitBtn = document.querySelector("#createVisitBtn");
+
+const token = JSON.parse(localStorage.getItem("authToken"));
+
+if (!token) {
+  signUpBtn.classList = "btn btn-primary";
+  signInBtn.classList = "btn btn-outline-success";
+}
+
+if (token) {
+  logOutBtn.classList = "btn btn-danger";
+  createVisitBtn.classList = "btn btn-outline-success";
+}
+
+logOutBtn.addEventListener("click", () => {
+  localStorage.clear();
+  logOutBtn.classList = "btn btn-danger d-none";
+  createVisitBtn.classList = "btn btn-outline-success d-none";
+  signUpBtn.classList = "btn btn-primary";
+  signInBtn.classList = "btn btn-outline-success";
+  window.location.reload();
+});
+
 signInBtn.addEventListener("click", () => {
   const signInSubmit = document.querySelector("#signInSubmit");
   signInSubmit.addEventListener("click", () => {
@@ -20,8 +45,12 @@ signInBtn.addEventListener("click", () => {
         })
         .then((token) => {
           localStorage.setItem("authToken", JSON.stringify(token));
+          signUpBtn.classList = "btn btn-primary d-none";
+          signInBtn.classList = "btn btn-outline-success d-none";
+          logOutBtn.classList = "btn btn-danger";
+          createVisitBtn.classList = "btn btn-outline-success";
           // Do any other operations after successful login here
-          window.location.href = "index.html";
+          window.location.reload();
         })
         .catch((error) => {
           // Handle the error
