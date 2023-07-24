@@ -8,7 +8,7 @@ class Modal{
     }
 
     createModalContent() {
-        const modalContent = document.createElement('div')
+        const modalContent = document.createElement('form')
         modalContent.setAttribute('class','modal-content')
         return modalContent
     }
@@ -54,11 +54,9 @@ class Modal{
         return body
     }
 
-    createFooter(footerContent) {
+    createFooter() {
         const footer = document.createElement('div')
         footer.setAttribute('class', 'modal-footer')
-
-        footer.appendChild(footerContent)
         return footer
     }
     

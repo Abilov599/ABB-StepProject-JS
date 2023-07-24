@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/index.css" />
     <title>STEP PROJECT</title>
     <!-- BOOTSTRAP CSS -->
     <link
@@ -184,49 +184,49 @@
     <!-- FORM -> FILTERING VISITS -->
 
     <div class="container">
-      <form id="filterForm" class="row" method="get" >
-          <div class="col-md-3 form-group">
-              <label for="searchInput">Search:</label>
-              <input type="text" class="form-control" id="searchInput" name="searchInput">
-          </div>
+      <form id="filterForm" class="row" method="get">
+        <div class="col-md-3 form-group">
+          <label for="searchInput">Search:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            name="searchInput"
+          />
+        </div>
 
-          <div class="col-md-3 form-group">
-              <label for="statusSelect">Status:</label>
-              <select class="form-control" id="statusSelect" name="statusSelect">
-                  <option value="all">all</option>
-                  <option value="open">open</option>
-                  <option value="done">done</option>
-              </select>
-          </div>
+        <div class="col-md-3 form-group">
+          <label for="statusSelect">Status:</label>
+          <select class="form-control" id="statusSelect" name="statusSelect">
+            <option value="all">all</option>
+            <option value="open">open</option>
+            <option value="done">done</option>
+          </select>
+        </div>
 
-          <div class="col-md-3 form-group">
-              <label for="urgencySelect">Urgency:</label>
-              <select class="form-control" id="urgencySelect" name="urgencySelect">
-                  <option value="all">all</option>
-                  <option value="high">high</option>
-                  <option value="normal">normal</option>
-                  <option value="low">low</option>
-              </select>
-          </div>
+        <div class="col-md-3 form-group">
+          <label for="urgencySelect">Urgency:</label>
+          <select class="form-control" id="urgencySelect" name="urgencySelect">
+            <option value="all">all</option>
+            <option value="high">high</option>
+            <option value="normal">normal</option>
+            <option value="low">low</option>
+          </select>
+        </div>
 
-          <div class="col-md-3 d-flex align-items-end">
-              <button type="submit" class="btn btn-primary btn-block">Search</button>
-          </div>
+        <div class="col-md-3 d-flex align-items-end">
+          <button type="submit" class="btn btn-primary btn-block">
+            Search
+          </button>
+        </div>
       </form>
-  </div>
+    </div>
     <!-- LIST OF CREATED VISITS -->
 
-
-    <section class="container mt-5" id="cards-list">
-
-        
-    </section>
-
-
-
+    <section class="container mt-5" id="cards-list"></section>
+   
+    
 
     <script src="src/js/index.js" type="module"></script>
-
-    
   </body>
 </html>

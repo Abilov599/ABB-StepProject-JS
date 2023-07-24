@@ -1,3 +1,7 @@
+ html, body {
+    height: 100%;
+ }
+ 
  .form-container {
      display: flex;
      justify-content: center;
@@ -6,4 +10,13 @@
  .form-inline {
      display: inline-block;
      margin-right: 10px;
+ }
+
+
+
+ .visit-toast{
+    position: fixed !important;
+    bottom: 20px ;
+    right: 20px;
+    z-index: 9999999999999;
  }
