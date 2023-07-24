@@ -42,9 +42,11 @@ if (authToken) {
 }
 
 
-const createVisitModal = new VisitModal()
 
-
-document.body.append(createVisitModal.renderVisit('createVisitBtnModal'))
-
-
+/* VISIT MODAL FOR CREATING */
+const visitModal = new VisitModal()
+document.body.append(visitModal.renderVisit('createVisitBtnModal'))
+const visitBtn = document?.querySelector('#create-visit-btn')
+visitBtn.addEventListener('click', e => {
+    visitModal.createCard(authToken)
+})
