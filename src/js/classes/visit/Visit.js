@@ -1,0 +1,6 @@
+class Visit {
+    constructor() {
+
+    }
+
+}
