@@ -14,7 +14,7 @@ export default class Visit {
         : ''; 
   
       return `
-        <div class="card">
+        <div class="card mb-5">
           <div class="card-body">
             <h5 class="card-title">${this.doctor} Visit - ${this.title}</h5>
             <p class="card-text">Full Name: ${this.fullName}</p>

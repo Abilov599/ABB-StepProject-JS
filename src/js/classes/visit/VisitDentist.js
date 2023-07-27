@@ -12,3 +12,5 @@ class VisitDentist extends Visit {
     }
   }
   
+
+export default VisitDentist
