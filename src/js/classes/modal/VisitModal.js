@@ -160,11 +160,12 @@ class VisitModal extends Modal {
         weight: 70 */
 
     loadData() {
-
+        const fullName = document.getElementById('full-name').value
         const title = document.getElementById('visit-purpose').value
         const description = document.getElementById('brief-visit-description').value
         const doctor = document.getElementById('doctors').value
-        const data = { title, description, doctor }
+        const urgencyLevel = document.getElementById('levels').value
+        const data = { title, description, doctor, fullName, urgencyLevel}
         if (doctor === 'Cardiologist') {
             const bp = document.getElementById('blood-pressure').value.toString()
             const age = document.getElementById('age-(cardiologist)').value
