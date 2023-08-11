@@ -1,11 +1,19 @@
 export default class Visit {
-    constructor(fullName, doctor, title, description, urgencyLevel) {
+    constructor(id, fullName, doctor, title, description, urgencyLevel) {
       this.fullName = fullName;
       this.doctor = doctor;
       this.title = title;
       this.description = description;
       this.urgencyLevel = urgencyLevel;
       this.showMore = false; 
+      this.id = id
+    }
+
+
+
+    deleteVisit() {
+      console.log(this.id)
+      document.querySelector(`.card${this.id}`).remove()
     }
   
     render() {
@@ -14,7 +22,7 @@ export default class Visit {
         : ''; 
   
       return `
-        <div class="card mb-5">
+        <div class="card mb-5 card${this.id}">
           <div class="card-body">
             <h5 class="card-title">${this.doctor} Visit - ${this.title}</h5>
             <p class="card-text">Full Name: ${this.fullName}</p>
