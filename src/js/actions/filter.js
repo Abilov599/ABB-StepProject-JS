@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       const authToken = localStorage.getItem("authToken");
-    //   console.log(authToken);
+      //   console.log(authToken);
       if (!authToken) {
         console.log("Auth token not found. Please log in first.");
         return;
       }
       const cleanAuthToken = authToken.replace(/"/g, "");
       const headers = {
-        Authorization: `Bearer ${cleanAuthToken}`, 
+        Authorization: `Bearer ${cleanAuthToken}`,
         "Content-Type": "application/json",
       };
 
-    //   console.log(headers);
+      //   console.log(headers);
 
       fetch("https://ajax.test-danit.com/api/v2/cards", {
         method: "GET",
